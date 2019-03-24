@@ -27,7 +27,8 @@ func power_number() int {
 	power_set := NewIntSet()
 	for a := 2; a <= 100; a++ {
 		for b := 2; b <= 100; b++ {
-			a_pow_b := math.Pow(float64(a), float64(b))
+			a_pow_b := int64(math.Pow(float64(a), float64(b)))
+			fmt.Printf("a_pow_b=%ld", a_pow_b)
 			power_set.Add(int64(a_pow_b))
 		}
 	}
